@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { LogMonitorComponent } from './log-monitor.component';
 import { LoggerConfig } from './logger.config';
 import { LoggerService } from './logger.service';
-import { DefaultLogFormatterService, LogFormatterService } from '..';
+import { DefaultLogFormatterService } from './default-log-formatter.service';
+import { LogFormatterService } from './log-formatter.service'; 
 
 // imports: [ LoggerModule.forRoot({ ... }) ]
 
@@ -20,9 +21,9 @@ const defaultFormatterConfig = [{
   declarations: [
     LogMonitorComponent
   ],
-  providers: [
-    LoggerService
-  ],
+  // providers: [
+  //   LoggerService
+  // ],
   exports: [
     LogMonitorComponent
   ]
